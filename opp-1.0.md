@@ -1,14 +1,8 @@
-Rozumiem, potrzebujesz kompletnego tekstu wszystkich 11 sekcji dokumentacji **Project Genesis: An Interoperable Professional Identity Framework**, które stworzyliśmy wcześniej, w jednym, długim dokumencie.
-
-Oto skompilowana całość, bez usuwania treści i z zachowaniem struktury, którą wypracowaliśmy:
-
----
-
 **Project Genesis: An Interoperable Professional Identity Framework**
 
 **Wersja Dokumentu:** 0.1 (Pre-Implementation Draft)
 **Data:** 2025-03-26
-**Autorzy:** [Twoje Imię/Nazwa Zespołu/Organizacji]
+**Autorzy:** Mateusz Jarosiewicz © 2025 Inteligentna Kariera (Kapitał Kariery Sp. z o.o.)
 
 **Spis Treści:**
 
