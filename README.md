@@ -1,93 +1,98 @@
-# ProfileCoder & Open Profile Protocol (OPP) - Otwarte Standardy dla Dynamicznej Tożsamości Zawodowej
+# ProfileCoder & Open Profile Protocol (OPP) - Open Standards for Dynamic Professional Identity
 
-Witamy w repozytorium projektu rozwijającego otwarte standardy **ProfileCoder** i **Open Profile Protocol (OPP)**! Naszą misją jest stworzenie fundamentów dla przyszłościowego, interoperacyjnego i skoncentrowanego na użytkowniku ekosystemu zarządzania tożsamością zawodową.
+Welcome to the repository developing the open standards **ProfileCoder** and **Open Profile Protocol (OPP)**! Our mission is to create foundations for a future-proof, interoperable, and user-centric ecosystem for professional identity management.
 
-[![ProfileCoder Spec v3.2](https://img.shields.io/badge/ProfileCoder-v3.2-blue.svg)](link-do-specyfikacji-profilecoder) <!-- Zaktualizuj link -->
-[![OPP Spec v0.1](https://img.shields.io/badge/OPP-v0.1(MVP)-orange.svg)](link-do-specyfikacji-opp) <!-- Zaktualizuj link -->
-[![License: CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/) <!-- Sprawdź i dostosuj licencję -->
-[![Status: Development](https://img.shields.io/badge/Status-Development-green.svg)](https://github.com/YourUsername/profilecoder-opp) <!-- Zaktualizuj link -->
+[![ProfileCoder Spec v3.3](https://img.shields.io/badge/ProfileCoder-v3.3-blue.svg)](https://github.com/ProfilMatrix/profilecoder-3.3.md)
+[![OPP Spec v1.0](https://img.shields.io/badge/OPP-v1.0-orange.svg)](https://github.com/ProfilMatrix/opp)
+[![License: CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
+[![Status: Proposal](https://img.shields.io/badge/Status-Proposal-yellow.svg)](https://github.com/ProfilMatrix)
 
-## Problem: Fragmentacja i Ograniczenia Obecnych Systemów
+## Problem: Fragmentation and Limitations of Current Systems
 
-Dzisiejszy sposób reprezentowania i wymiany danych o kompetencjach, doświadczeniach i preferencjach zawodowych jest przestarzały. Opieramy się na statycznych CV, rozproszonych profilach online i zamkniętych systemach HR, co prowadzi do:
+Today's method of representing and exchanging data about competencies, experiences, and professional preferences is outdated. We rely on static CVs, scattered online profiles, and closed HR systems, leading to:
 
-*   **Fragmentacji danych** i braku spójnego obrazu potencjału jednostki.
-*   **Powierzchownego dopasowania** opartego na słowach kluczowych, a nie realnym zrozumieniu.
-*   **Braku interoperacyjności** między kluczowymi systemami (ATS, platformy e-learningowe, narzędzia HR).
-*   **Ograniczonej kontroli użytkownika** nad swoimi danymi i prywatnością.
+*   **Data fragmentation** and lack of a coherent picture of individual potential.
+*   **Superficial matching** based on keywords rather than genuine understanding.
+*   **Lack of interoperability** between key systems (ATS, e-learning platforms, HR tools).
+*   **Limited user control** over personal data and privacy.
 
-## Nasze Rozwiązanie: Otwarte Standardy dla Ekosystemu Przyszłości
+## Our Solution: Open Standards for the Future Ecosystem
 
-Proponujemy dwa współpracujące ze sobą otwarte standardy, aby zaradzić tym problemom:
+We propose two complementary open standards to address these problems:
 
-### 1. ProfileCoder: Standard Formatu Danych
+### 1. ProfileCoder: Data Format Standard
 
-*   **Co to jest?** Otwarty, tekstowy format danych (inspirowany vCard/iCalendar) zaprojektowany do **bogatego, wielowymiarowego i kontekstowego opisu tożsamości zawodowej**.
-*   **Kluczowe Cechy:**
-    *   **Segmentacja:** Logiczny podział danych na segmenty (np. `🧠` Temperament, `🏅` Kompetencje, `💼` Preferencje Środowiska, `🤖` Relacje z AI) identyfikowane unikalnymi symbolami (emoji).
-    *   **Ustrukturyzowane Właściwości:** Dane zapisywane jako pary klucz-wartość wewnątrz segmentów.
-    *   **Kontekst (`@`):** Możliwość określenia, że dana cecha lub preferencja dotyczy konkretnej sytuacji (np. `@Team` vs `@Client`).
-    *   **Waga (`^`):** Pozwala użytkownikowi na określenie priorytetu/ważności danej preferencji.
-    *   **Rozszerzalność:** Zaprojektowany z myślą o łatwym dodawaniu nowych segmentów/właściwości w przyszłości.
-*   **Aktualna Wersja:** **v3.2**
-*   **Pełna Specyfikacja:** **[Tutaj wstaw link do szczegółowej specyfikacji ProfileCoder v3.2]**
+*   **What is it?** An open, text-based data format (inspired by vCard/iCalendar) designed for **rich, multidimensional, and contextual description of professional identity**.
+*   **Key Features:**
+    *   **Segmentation:** Logical division of data into segments (e.g., `🧠` Temperament, `🏅` Competencies, `💼` Environment Preferences, `🤖` AI Relationships) identified by unique symbols (emoji).
+    *   **Structured Properties:** Data stored as key-value pairs within segments.
+    *   **Context (`@`):** Ability to specify that a trait or preference applies to a specific situation (e.g., `@Team` vs `@Client`).
+    *   **Weight (`^`):** Allows users to indicate the priority/importance of a given preference.
+    *   **Extensibility:** Designed for easy addition of new segments/properties in the future.
+    *   **Quantum Presence Interface (QPI):** Integration of static professional profiles with dynamic real-time presence states (new in v3.3).
+*   **Current Version:** **v3.3** (Quantum Presence Integration)
+*   **Full Specification:** [ProfileCoder v3.3 Specification](https://github.com/ProfilMatrix/profilecoder/blob/main/profilecoder-3.3.md)
 
-### 2. Open Profile Protocol (OPP): Standard Komunikacyjny
+### 2. Open Profile Protocol (OPP): Communication Standard
 
-*   **Co to jest?** Otwarty protokół komunikacyjny (inspirowany MCP Anthropic) definiujący **bezpieczny i ustandaryzowany sposób interakcji** między aplikacjami (Klientami OPP) a osobistymi repozytoriami danych zawodowych (Serwerami OPP).
-*   **Kluczowe Cechy:**
-    *   **Architektura Klient-Serwer:** Klient wysyła żądania, Serwer (kontrolowany przez użytkownika) odpowiada.
-    *   **Bezpieczeństwo:** Wymuszone szyfrowanie (HTTPS/TLS), standardowe mechanizmy uwierzytelniania (API Keys w MVP, docelowo OAuth 2.0).
-    *   **Kontrola Użytkownika:** Właściciel Serwera OPP zarządza dostępem i granularnymi uprawnieniami dla Klientów.
-    *   **Interoperacyjność:** Umożliwia komunikację różnych systemów bez dedykowanych integracji.
-    *   **Standardowy Format Komunikacji:** Oparty na JSON-RPC 2.0 over HTTP POST.
-*   **Aktualna Wersja:** **v0.1 (MVP)** - Skupiona na odczycie zasobów (`opp.discover`, `opp.getResource`).
-*   **Pełna Specyfikacja:** **[Tutaj wstaw link do szczegółowej specyfikacji OPP v0.1]**
+*   **What is it?** An open communication protocol defining a **secure and standardized way of interaction** between applications (OPP Clients) and personal professional data repositories (OPP Servers).
+*   **Key Features:**
+    *   **Client-Server Architecture:** Client sends requests, Server (controlled by the user) responds.
+    *   **Security:** Enforced encryption (HTTPS/TLS), standard authentication mechanisms (OAuth 2.0).
+    *   **User Control:** OPP Server owner manages access and granular permissions for Clients.
+    *   **Interoperability:** Enables communication between different systems without dedicated integrations.
+    *   **Standard Communication Format:** Based on JSON-RPC 2.0 over HTTP POST.
+*   **Current Version:** **v1.0** - Full read/write capabilities with secure authentication.
+*   **Full Specification:** [OPP v1.0 Specification](https://github.com/ProfilMatrix/opp/blob/main/opp-1.0.md)
 
-## Jak To Działa Razem?
+## How It Works Together
 
-1.  Użytkownik tworzy i zarządza swoim bogatym profilem zawodowym zapisanym w formacie **ProfileCoder**.
-2.  Profil ten jest bezpiecznie przechowywany na jego osobistym **Serwerze OPP**.
-3.  Użytkownik udziela **zgody** wybranym aplikacjom (np. systemowi ATS, platformie e-learningowej), generując dla nich klucze dostępowe i definiując uprawnienia w ramach **OPP**.
-4.  Aplikacje te (działając jako **Klienci OPP**) mogą następnie bezpiecznie komunikować się z **Serwerem OPP** użytkownika za pomocą protokołu **OPP**, aby pobrać potrzebne fragmenty profilu **ProfileCoder**.
-5.  Dane te mogą być następnie wykorzystane przez **AI** po stronie Klienta do inteligentnego dopasowania, personalizacji, analizy itp.
+1.  Users create and manage their rich professional profiles saved in the **ProfileCoder** format.
+2.  These profiles are securely stored on their personal **OPP Server**.
+3.  Users grant **consent** to selected applications (e.g., ATS systems, e-learning platforms), generating access keys and defining permissions within the **OPP** framework.
+4.  These applications (acting as **OPP Clients**) can then securely communicate with the user's **OPP Server** using the **OPP** protocol to retrieve needed fragments of the **ProfileCoder** profile.
+5.  This data can then be used by **AI** on the Client side for intelligent matching, personalization, analysis, etc.
+6.  With the new **Quantum Presence Interface**, applications can also access and update dynamic presence states, enabling real-time collaboration and contextual interactions.
 
-**(Opcjonalnie: Prosty diagram ilustrujący tę współpracę)**
+## Project Status
 
-## Status Projektu
+The project is currently in the **proposal phase**. We are focused on:
 
-Projekt jest obecnie w fazie **aktywnego rozwoju**. Pracujemy nad:
+*   Refining the ProfileCoder and OPP specifications through community consultation.
+*   Planning reference implementations for OPP Servers and Clients.
+*   Developing libraries for parsing and creating ProfileCoder profiles.
+*   Building a community around these standards.
+*   Exploring practical applications in labor markets, smart cities, and cognitive environments.
 
-*   Udoskonalaniem specyfikacji ProfileCoder i OPP.
-*   Tworzeniem referencyjnej implementacji Serwera OPP v0.1 (open source - planowane).
-*   Rozwojem bibliotek do parsowania ProfileCoder.
-*   Budowaniem społeczności wokół standardów.
+## How You Can Participate
 
-## Jak Możesz Wziąć Udział?
+We are open to collaboration! You can help by:
 
-Jesteśmy otwarci na współpracę! Możesz pomóc poprzez:
+*   **Reviewing Specifications:** Review the ProfileCoder and OPP specifications and submit your comments, suggestions, or identified ambiguities through our GitHub repository.
+*   **Participating in Discussions:** Join conversations about standard development, use cases, and architecture in the community channels listed below.
+*   **Implementing the Standards:** Start experimenting with implementing a ProfileCoder parser, OPP Client, or even your own OPP Server in your preferred technology. Share your experiences!
+*   **Contributing Code (in the future):** When we release reference code, we welcome corrections and new functionalities through Pull Requests.
+*   **Promotion:** Help us spread information about the ProfileCoder and OPP standards in your network.
 
-*   **Przeglądanie Specyfikacji:** Zapoznaj się ze specyfikacjami ProfileCoder i OPP i zgłaszaj swoje uwagi, sugestie lub znalezione niejasności w sekcji **[Issues](link-do-issues)**.
-*   **Udział w Dyskusjach:** Dołącz do rozmów na temat rozwoju standardów, przypadków użycia i architektury na **[Link do Forum / Discorda / Mailing Listy]** (wkrótce).
-*   **Implementację Standardów:** Zacznij eksperymentować z implementacją parsera ProfileCoder, Klienta OPP lub nawet własnego Serwera OPP w wybranej przez siebie technologii. Podziel się swoimi doświadczeniami!
-*   **Kontrybucję do Kodu (w przyszłości):** Gdy udostępnimy kod referencyjny, zapraszamy do zgłaszania poprawek i nowych funkcjonalności poprzez Pull Requests.
-*   **Promocję:** Pomóż nam szerzyć informacje o standardach ProfileCoder i OPP w swojej sieci kontaktów.
+## Timeline
 
-Więcej szczegółów na temat współtworzenia znajdziesz w naszej **[Dokumentacji Projektowej](link-do-glownej-dokumentacji)**.
+- **April-June 2025**: Open consultation period
+- **July 2025**: Review of feedback and revision of specifications
+- **August 2025**: Pilot implementations with selected partners
+- **Q4 2025**: Formal release of the standards, if sufficient consensus and validation have been achieved
 
-## Licencja
+## License
 
-*   Specyfikacje ProfileCoder i Open Profile Protocol (OPP) są udostępniane na licencji **[Creative Commons Attribution 4.0 International (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/)**.
-*   Kod źródłowy referencyjnych implementacji (jeśli/gdy powstanie) będzie prawdopodobnie udostępniany na licencji **[MIT](https://opensource.org/licenses/MIT)** lub **[Apache 2.0](https://www.apache.org/licenses/LICENSE-2.0)**.
+*   ProfileCoder and Open Profile Protocol (OPP) specifications are available under the **[Creative Commons Attribution 4.0 International (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/)** license.
+*   Source code for reference implementations (when/if created) will likely be available under the **[MIT](https://opensource.org/licenses/MIT)** or **[Apache 2.0](https://www.apache.org/licenses/LICENSE-2.0)** license.
 
-## Kontakt
+## Contact
 
-Masz pytania, pomysły, chcesz nawiązać współpracę? Skontaktuj się z nami:
+Have questions, ideas, or want to collaborate? Contact us:
 
-*   **Główny Kontakt:** Mateusz Jarosiewicz mateusz@inteligentnakariera.pl
-*   **Issues na GitHubie:** 
-*   **Kanał Społeczności:** [Link do Forum / Discorda / etc.] (wkrótce)
+*   **Main Contact:** Mateusz Jarosiewicz (contact@profilecoder.org)
+*   **GitHub:** [https://github.com/ProfilMatrix](https://github.com/ProfilMatrix)
 
 ---
 
-Dziękujemy za zainteresowanie przyszłością zarządzania tożsamością zawodową!
+Thank you for your interest in the future of professional identity management!
